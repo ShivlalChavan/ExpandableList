@@ -45,6 +45,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        initView();
+
+
+
+    }
+
+    private void initView() {
+
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         dbHelper = new DBHelper(this);
@@ -61,7 +69,6 @@ public class MainActivity extends AppCompatActivity {
         if(c.getCount()!=0){
             dbHelper.deletelist();
         }
-
     }
 
     private void setupPhoneDataList() {
